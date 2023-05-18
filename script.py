@@ -14,9 +14,14 @@ def read_applications():
     ).reset_index().rename(
         columns={'index': 'ID'}
     )
-    print(applications.head(5).T)
+    return applications
+
+
+def extract_schema(applications):
+    doc_schema = pa.Schema.from_pandas(applications)
+    print(doc_schema)
 
 
 ############ ------------ DRIVER CODE ------------##############################
 if __name__ == "__main__":
-    read_applications()
+    extract_schema(read_applications())
