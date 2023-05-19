@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import pyarrow as pa
+import psycopg2
 
 
 ############ ------------ FUNCTION(S) ------------##############################
