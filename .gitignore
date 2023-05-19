@@ -1,6 +1,7 @@
 .csv
 parquetenv
 data
+.env 
 
 # Settings or config
 settings
