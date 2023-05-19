@@ -33,7 +33,7 @@ def convert_csv_to_parquet():
 
 def read_partition():
     test = pd.read_parquet('data/applications_processed.parquet')
-    partition = test[test.CODE_GENDER == 'M']
+    partition = test[test.CNT_CHILDREN > 3]
     print(partition)
 
 
