@@ -31,6 +31,13 @@ def convert_csv_to_parquet():
     )
 
 
+def read_partition():
+    test = pd.read_parquet('data/applications_processed.parquet')
+    partition = test[test.CODE_GENDER == 'M']
+    print(partition)
+
+
 ############ ------------ DRIVER CODE ------------##############################
 if __name__ == "__main__":
-    convert_csv_to_parquet()
+    # convert_csv_to_parquet()
+    read_partition()
